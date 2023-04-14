@@ -1,4 +1,4 @@
-import { onAuthStateChanged } from 'firebase/auth';
+// import { onAuthStateChangedListener}from '../utils/firebase/firebase.utils.js'
 import {createContext,useState,useEffect} from 'react'
 import { createUserDocumentFromAuth, onAuthStateChangedListener,signOutUser } from '../utils/firebase/firebase.utils';
 // import { useSearchParams } from 'react-router-dom';
@@ -14,19 +14,19 @@ export const UserProvider=({children})=>{
 const [currentUser,setCurrentUser]=useState(null);
 const value ={currentUser,setCurrentUser} ;
 
-signOutUser();
+// signOutUser();
 
-useEffect(()=>{
-   const unsubscribe= onAuthStateChangedListener((user)=>{
-    // console.log(user);
-    if(user)
-    {
-        createUserDocumentFromAuth(user);
-    }
-    setCurrentUser(user);
-})
-   return unsubscribe;
-},[]);
+// useEffect(()=>{
+//    const unsubscribe= onAuthStateChangedListener((user)=>{
+//     // console.log(user);
+//     setCurrentUser(user);
+//     if(user)
+//     {
+//         createUserDocumentFromAuth(user);
+//     }
+// })
+//    return unsubscribe;
+// },[]);
 
     return <UserContext.Provider value={value}>
         {children}
