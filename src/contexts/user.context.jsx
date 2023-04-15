@@ -1,6 +1,6 @@
 // import { onAuthStateChangedListener}from '../utils/firebase/firebase.utils.js'
-import {createContext,useState,useEffect} from 'react'
-import { createUserDocumentFromAuth, onAuthStateChangedListener,signOutUser } from '../utils/firebase/firebase.utils';
+import {createContext,useState} from 'react'
+// import { createUserDocumentFromAuth, onAuthStateChangedListener,signOutUser } from '../utils/firebase/firebase.utils';
 // import { useSearchParams } from 'react-router-dom';
 
 
